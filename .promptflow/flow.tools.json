@@ -1,0 +1,57 @@
+{
+  "package": {},
+  "code": {
+    "summarize_text_content.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "command": {
+          "type": [
+            "string"
+          ]
+        },
+        "sql_results": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "summarize_text_content.jinja2"
+    },
+    "SQL_Connection_Input.py": {
+      "type": "python",
+      "inputs": {
+        "query": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "source": "SQL_Connection_Input.py",
+      "function": "fetch_data_from_mysql",
+      "input_schema": {
+        "query": "string"
+      },
+      "output_schema": {
+        "results": "dict"
+      }
+    },
+    "llm_results_to_mysql.py": {
+      "type": "python",
+      "inputs": {
+        "data": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "source": "llm_results_to_mysql.py",
+      "function": "insert_data_into_mysql",
+      "input_schema": {
+        "data": "string"
+      },
+      "output_schema": {
+        "status": "string"
+      }
+    }
+  }
+}

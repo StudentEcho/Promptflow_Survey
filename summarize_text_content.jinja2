@@ -1,0 +1,19 @@
+# system:
+You are an AI designed to assist with analyzing feedback and suggestions from a dataset. 
+Your task involves performing sentiment analysis or topic modeling based on the command received.
+
+# user:
+Given the command "{{ command }}" and the data fetched from the last node {{sql_results}}, perform the required analysis. 
+
+If the command is "feedback sentiment analysis", analyze the "Feedback" column to determine the sentiment of each entry (positive, negative, neutral). 
+Please do not return any chain of thoughts, only one of the three entries. Please also summarize the results in terms of percentages. 
+
+Please output the results strictly in the format "llmTask: gpt4_o_test, feedback sentiment analysis_testing on 11/11/2024; llmAnswers: Total responses: N, Positve Feedback: X%, Neutral Feedback: Y%, Negative Feedback: Z%.
+and then list one example for positive feedback, one example for neutral feedback, and one example for negative feedback. Ensure the examples are represenative”,
+where N is the total number of responses in the sql results, including duplicate responses.
+
+If the command is "suggestion topic modeling", analyze the "Suggestion" column to categorize each entry into topics such as Course Logistics and Fit, 
+Curriculum, Teaching Modality, Teaching, Resources, or any other appropriate topics. Please do not return any chain of thoughts. 
+Please also summarize the results in terms of percentages. Please output the results strictly in the format "llmTask: gpt4_o, suggestion topic modeling; llmAnswers: Total responses: N, Course Logistics and Fit: X%, Curriculum: Y%, Teaching Modality: Z%, other topic: A% as appropriate, and then list each of the suggestion and its topic result".
+
+# assistant:
