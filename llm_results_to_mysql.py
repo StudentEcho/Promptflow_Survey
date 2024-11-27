@@ -5,10 +5,10 @@ import uuid
 @tool(input_schema={"data": "string"}, output_schema={"status": "string"})
 def insert_data_into_mysql(data):
     # Connection details for MySQL
-    host = 'wix-mysql-server-name.mysql.database.azure.com'
-    database = 'mysqltutorial'
-    user = 'shuzhennong'  # Your Azure MySQL username
-    password = 'Fudan@0216$'  # Your Azure MySQL password
+    host = ''
+    database = ''
+    user = ''  # Your Azure MySQL username
+    password = ''  # Your Azure MySQL password
     
     status = ''
     

@@ -17,3 +17,11 @@ DESCRIBE mysqltutorial.MicrosoftFormTable;
 select * from mysqltutorial.MicrosoftFormTable; 
 
 INSERT INTO mysqltutorial.MicrosoftFormTable (School, Grade, Question, SubmissionTime, ResponderEmail) VALUES ('High School', '9th', 'What are the biggest challenges American high school students are facing', '2024-07-08', 'lyhnszk@hotmail.com');
+
+delete from mysqltutorial.surveytable 
+where _updatedDate < '2024-11-14';
+
+select * from mysqltutorial.surveytable
+order by _updatedDate asc;  
+
+select * from mysqltutorial.covid_data_for_sentiment_analysis;

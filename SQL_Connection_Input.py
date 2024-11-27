@@ -4,10 +4,10 @@ import mysql.connector
 @tool(input_schema={"query": "string"}, output_schema={"results": "dict"})
 def fetch_data_from_mysql(query):
     # Connection details
-    host = 'wix-mysql-server-name.mysql.database.azure.com'
-    database = 'mysqltutorial'
-    user = 'shuzhennong'  # Your Azure MySQL username
-    password = 'Fudan@0216$'  # Your Azure MySQL password
+    host = ''
+    database = ''
+    user = ''  # Your Azure MySQL username
+    password = ''  # Your Azure MySQL password
 
     # Initialize dictionaries to store results
     results_dict = {
